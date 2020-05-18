@@ -16,6 +16,8 @@
 		<string>Icon-iPhone-57@2x.png</string>
 		<string>Icon-iPad-76.png</string>
 	</array>
+    <key>CFBundleShortVersionString</key>
+    <string>DosPad</string>
 	<key>CFBundleIdentifier</key>
 	<string>8HLDK844H7.net.litchie.dospad</string>
 	<key>CFBundleInfoDictionaryVersion</key>
