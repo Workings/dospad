@@ -172,7 +172,7 @@ static struct {
     // 8. Navigation Bar Show Button
     //---------------------------------------------------  
 #ifdef IDOS
-    if (!autoExit)
+    if (false)//autoExit)
     {
         UIButton *btnTop = [[UIButton alloc] initWithFrame:CGRectMake(0,0,viewRect.size.width,30)];
         btnTop.backgroundColor=[UIColor clearColor];
@@ -616,7 +616,7 @@ static struct {
     if (self.interfaceOrientation == UIInterfaceOrientationPortrait||
         self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
     {
-        if (!autoExit)
+        if (false)//autoExit)
         {        
             [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideNavigationBar) object:nil];
             [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -639,7 +639,7 @@ static struct {
      object:nil];    
 
 #ifdef IDOS
-    if (!autoExit)
+    if (false)//!autoExit)
     {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideNavigationBar) object:nil];
     }

@@ -148,7 +148,7 @@ static struct {
     // 9. Create back Button
     //---------------------------------------------------  
 #ifdef IDOS
-    if (!autoExit)
+    if (false)//autoExit)
     {
         btnBack = [[UIButton alloc] initWithFrame:CGRectMake(0,0,140,44)];
         [btnBack addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];

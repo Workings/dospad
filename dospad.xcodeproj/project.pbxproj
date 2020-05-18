@@ -974,7 +974,7 @@
 		E715B35A1293B7750098D437 /* DOSPadBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DOSPadBaseViewController.m; path = Shared/DOSPadBaseViewController.m; sourceTree = "<group>"; };
 		E71A268C129A1B2D0013D51C /* landbariphon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = landbariphon.png; path = "dospad/misc-res/landbariphon.png"; sourceTree = "<group>"; };
 		E71A268D129A1B2D0013D51C /* landbariphon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landbariphon@2x.png"; path = "dospad/misc-res/landbariphon@2x.png"; sourceTree = "<group>"; };
-		E71E60E011B5502700EC5A05 /* dospad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dospad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71E60E011B5502700EC5A05 /* DOSPAD Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOSPAD Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71E60E211B5502800EC5A05 /* dospad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dospad-Info.plist"; sourceTree = "<group>"; };
 		E71E60EB11B5506800EC5A05 /* libdosbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdosbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71E60F311B550FD00EC5A05 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -1679,7 +1679,7 @@
 			isa = PBXGroup;
 			children = (
 				FD6526630DE8FCCB002AD96B /* libSDLiPhoneOS.a */,
-				E71E60E011B5502700EC5A05 /* dospad.app */,
+				E71E60E011B5502700EC5A05 /* DOSPAD Beta.app */,
 				E71E60EB11B5506800EC5A05 /* libdosbox.a */,
 				E7D6B89811BF322E00D34665 /* libminizip.a */,
 				E778B2B2123918F6008AF49A /* libSDL_net.a */,
@@ -3097,7 +3097,7 @@
 			);
 			name = dospad;
 			productName = dospad;
-			productReference = E71E60E011B5502700EC5A05 /* dospad.app */;
+			productReference = E71E60E011B5502700EC5A05 /* DOSPAD Beta.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E71E60EA11B5506800EC5A05 /* dosbox */ = {
@@ -3201,11 +3201,12 @@
 				LastUpgradeCheck = 0460;
 				TargetAttributes = {
 					E71E60DF11B5502700EC5A05 = {
-						DevelopmentTeam = 4C8YZND49H;
+						DevelopmentTeam = 5QKJ5G3FXW;
+						ProvisioningStyle = Automatic;
 					};
 					E7BE1297128BF31A0046990B = {
-						DevelopmentTeam = 4C8YZND49H;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 5QKJ5G3FXW;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -4028,15 +4029,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 4C8YZND49H;
+				DEVELOPMENT_TEAM = 5QKJ5G3FXW;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = IPHONEOS;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONEOS,
+					IDOS,
+				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ./include;
 				INFOPLIST_FILE = "dospad-Info.plist";
@@ -4050,9 +4055,10 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_NAME = dospad;
+				PRODUCT_NAME = "DOSPAD Beta";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 arm64";
@@ -4065,14 +4071,18 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 4C8YZND49H;
+				DEVELOPMENT_TEAM = 5QKJ5G3FXW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = IPHONEOS;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONEOS,
+					IDOS,
+				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "dospad-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -4085,9 +4095,10 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_NAME = dospad;
+				PRODUCT_NAME = "DOSPAD Beta";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -4182,11 +4193,11 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 4C8YZND49H;
+				DEVELOPMENT_TEAM = 5QKJ5G3FXW;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4211,9 +4222,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
 				PRODUCT_NAME = iDOS;
-				PROVISIONING_PROFILE = "62af9aed-0694-4b7b-98d5-97d9aaa31211";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62af9aed-0694-4b7b-98d5-97d9aaa31211";
-				PROVISIONING_PROFILE_SPECIFIER = iDOS2Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7s armv7 arm64";
@@ -4227,12 +4236,12 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 4C8YZND49H;
+				DEVELOPMENT_TEAM = 5QKJ5G3FXW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4253,9 +4262,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
 				PRODUCT_NAME = iDOS;
-				PROVISIONING_PROFILE = "62af9aed-0694-4b7b-98d5-97d9aaa31211";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62af9aed-0694-4b7b-98d5-97d9aaa31211";
-				PROVISIONING_PROFILE_SPECIFIER = iDOS2Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -4375,14 +4382,18 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 4C8YZND49H;
+				DEVELOPMENT_TEAM = 5QKJ5G3FXW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				GCC_PREPROCESSOR_DEFINITIONS = IPHONEOS;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONEOS,
+					IDOS,
+				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "dospad-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -4395,9 +4406,10 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_NAME = dospad;
+				PRODUCT_NAME = "DOSPAD Beta";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -4478,8 +4490,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
 				PRODUCT_NAME = iDOS;
-				PROVISIONING_PROFILE = "d3a9468a-88ee-4722-9965-fa5a21d851bc";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "d3a9468a-88ee-4722-9965-fa5a21d851bc";
 				PROVISIONING_PROFILE_SPECIFIER = iDOS2AppStore;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
